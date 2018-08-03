@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  projectx.api:
+    image: ${DOCKER_REGISTRY}projectxapi
+    build:
+      context: .
+      dockerfile: ProjectX.API\Dockerfile
+
+  projectx.customerapi:
+    image: ${DOCKER_REGISTRY}projectxcustomerapi
+    build:
+      context: .
+      dockerfile: ProjectX.CustomerAPI\Dockerfile
+
+
+  projectx.billsapi:
+    image: ${DOCKER_REGISTRY}projectxbillsapi
+    build:
+      context: .
+      dockerfile: ProjectX.BillsAPI\Dockerfile
+
